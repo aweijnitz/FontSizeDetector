@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>TessearctJS Test</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>
+</head>
+<body>
+<div class="loading">Loading&#8230;</div>
+
+<div class="container">
+    <div class="row">
+        <div class="one column"></div>
+        <div class="ten columns">
+            <h1>Font Size Detector</h1>
+            <p>All your font size are belong to us!</p>
+        </div>
+        <div class="one column"></div>
+    </div>
+    <div class="row">
+        <div class="one column"></div>
+        <div class="ten columns">
+            <h2>File Analysis</h2>
+
+            <form class="box" method="post" id="fileUpload" action="" enctype="multipart/form-data">
+                <div class="box__input">
+                    <label for="file"><strong>Choose a file</strong><span class="box__dragndrop"> or drag it here</span>.</label>
+
+                    <input class="box__file" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
+                    <button class="box__button" type="submit">Upload</button>
+                </div>
+                <div class="box__uploading">Uploading&hellip;</div>
+                <div class="box__success">Done!</div>
+                <div class="box__error">Error! <span></span>.</div>
+            </form>
+        </div>
+        <div class="one column"></div>
+    </div>
+
+    <div class="row ocrResult">
+        <div class="one column"></div>
+        <div class="ten columns">
+            <h3>Result</h3>
+            <div class="info">
+                <ol id="wordInfo">
+                </ol>
+            </div>
+            <div id="uploadedImage">
+                <img src="" />
+            </div>
+        </div>
+        <div class="one column"></div>
+    </div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
